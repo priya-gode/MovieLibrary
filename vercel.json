@@ -1,9 +1,8 @@
 {
   "version": 2,
-  "routes": [
-    {
-      "src": "/",
-      "dest": "/index.js"
+  "functions": {
+    "api": {
+      "handler": "vercel/server.js"
     }
-  ]
+  }
 }
