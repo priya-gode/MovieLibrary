@@ -4,11 +4,11 @@ FROM openjdk:17-jdk-slim
 # Set the working directory in the container
 WORKDIR /app
 
-# Copy the application's JAR file to the container
-COPY target/MovieManagementSystem-0.0.1-SNAPSHOT.jar app.jar
+# Copy the application's WAR file to the container
+COPY target/MovieManagementSystem-0.0.1-SNAPSHOT.war app.war
 
-# Expose the port that the application runs on
+# Expose the port that the application 
 EXPOSE 1686
 
-# Run the JAR file
-ENTRYPOINT ["java", "-jar", "app.jar"]
+# Run the WAR file
+ENTRYPOINT ["java", "-jar", "app.war"]
