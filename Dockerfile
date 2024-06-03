@@ -8,7 +8,7 @@ WORKDIR /app
 COPY target/MovieManagementSystem-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port that the application runs on
-EXPOSE 8080
+EXPOSE 1686
 
 # Run the JAR file
 ENTRYPOINT ["java", "-jar", "app.jar"]
