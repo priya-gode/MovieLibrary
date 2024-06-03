@@ -5,10 +5,10 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the application's JAR file to the container
-COPY target/MovieManagementSystem.jar app.jar
+COPY target/MovieManagementSystem-0.0.1-SNAPSHOT.jar app.jar
 
 # Expose the port that the application runs on
-EXPOSE 1686
+EXPOSE 8080
 
 # Run the JAR file
 ENTRYPOINT ["java", "-jar", "app.jar"]
