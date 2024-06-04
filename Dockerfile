@@ -6,7 +6,7 @@ FROM tomcat:9.0
 WORKDIR /usr/local/tomcat/webapps
 
 # Copy the WAR file from the target directory to the Tomcat webapps directory
-COPY target/MovieManagementSystem.war /usr/local/tomcat/webapps/
+COPY target/MovieManagementSystem-0.0.1-SNAPSHOT/MovieManagementSystem-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/
 
 # Expose the desired port
 EXPOSE 1686
