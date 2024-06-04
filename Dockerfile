@@ -5,7 +5,7 @@ FROM tomcat:9.0
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
 
 # Copy the WAR file to the webapps directory of Tomcat
-COPY target/MovieManagementSystem.war /usr/local/tomcat/webapps/ROOT.war
+COPY target/MovieManagementSystem.war 
 
 # Expose the port on which your Spring Boot app will run
 EXPOSE 1686
