@@ -8,7 +8,7 @@ RUN rm -rf /usr/local/tomcat/webapps/ROOT
 COPY target/MovieManagementSystem.war /usr/local/tomcat/webapps/ROOT.war
 
 # Expose the port on which your Spring Boot app will run
-EXPOSE 8080
+EXPOSE 1686
 
 # Start Tomcat
 CMD ["catalina.sh", "run"]
