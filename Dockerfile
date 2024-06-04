@@ -1,14 +1,14 @@
-# Use an official Tomcat runtime as a parent image
+# Use the official Tomcat image from the Docker Hub
 FROM tomcat:9.0
 
-# Remove the default ROOT webapp to replace it with your WAR
+# Remove the default ROOT webapp
 RUN rm -rf /usr/local/tomcat/webapps/ROOT
 
 # Copy the WAR file to the webapps directory of Tomcat
-COPY target/MovieManagementSystem-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/ROOT.war
+COPY target/MovieManagementSystem.war /usr/local/tomcat/webapps/ROOT.war
 
-# Expose port 1686
-EXPOSE 1686
+# Expose the port on which your Spring Boot app will run
+EXPOSE 8080
 
 # Start Tomcat
 CMD ["catalina.sh", "run"]
