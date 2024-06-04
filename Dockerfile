@@ -1,14 +1,17 @@
-# Use the official Tomcat image from the Docker Hub
+# Use the official Tomcat base image
 FROM tomcat:9.0
 
-# Remove the default ROOT webapp
-RUN rm -rf /usr/local/tomcat/webapps/ROOT
+# Set the working directory to /usr/local/tomcat/webapps
+WORKDIR /usr/local/tomcat/webapps
 
-# Copy the WAR file to the webapps directory of Tomcat
-COPY target/MovieManagementSystem.war 
+# Copy the WAR file from the target directory to the Tomcat webapps directory
+COPY target/MovieManagementSystem.war /usr/local/tomcat/webapps/
 
-# Expose the port on which your Spring Boot app will run
+# Expose the desired port
 EXPOSE 1686
 
-# Start Tomcat
+# Change the Tomcat server.xml configuration to use port 1686
+RUN sed -i 's/port="8080"/port="1686"/' /usr/local/tomcat/conf/server.xml
+
+# Run Tomcat
 CMD ["catalina.sh", "run"]
