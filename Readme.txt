@@ -1,7 +1,7 @@
 
 
 
-Execution:
+
 
 Sign in to the website. After logging in, you will be directed to the home page, which contains all the public and private playlists associated with the logged-in user.
 In the playlists you can view movies that are added to the list and you can even remove movie from the list through remove option available
