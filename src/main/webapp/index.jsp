@@ -266,9 +266,11 @@ body{
       <div class="form-content">
       
         <div class="login-form">
+       
         <span class="blink">
-        <h3 align=center style="color:red">${message}</h3>
+        <h3 align=center style="color:red">  ${message}  </h3>
       </span>
+    
           <div class="title">Login</div>
           <form action="checkcustomerlogin" method="post">
             <div class="input-boxes">
